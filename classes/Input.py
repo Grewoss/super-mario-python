@@ -58,3 +58,10 @@ class Input:
 
     def isRightMouseButtonPressed(self):
         return pygame.mouse.get_pressed()[2]
+<<<<<<< HEAD
+=======
+
+    def checkIfRestartEvent(self, event):
+        return (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE) or \
+        (event.type == pygame.KEYDOWN and event.key == pygame.K_F5)
+>>>>>>> db113c6cb069d6c02806329d181b8b3153c5caf7
