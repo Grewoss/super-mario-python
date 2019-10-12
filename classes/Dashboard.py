@@ -8,7 +8,7 @@ class Dashboard(Font):
         Font.__init__(self, filePath, size)
         self.state = "menu"
         self.screen = screen
-        self.levelName = "1-1"
+        self.levelName = ""
         self.points = 0
         self.coins = 0
         self.ticks = 0
@@ -37,7 +37,10 @@ class Dashboard(Font):
         for char in text:
             charSprite = pygame.transform.scale(self.charSprites[char], (size, size))
             self.screen.blit(charSprite, (x, y))
-            x += size + 1
+            if char == " ":
+                x += size//2
+            else:
+                x += size
 
     def coinString(self):
         return "{:02d}".format(self.coins)

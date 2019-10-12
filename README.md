@@ -4,7 +4,7 @@ This is inspired by Meth-Meth-Method's: https://github.com/meth-meth-method/supe
 
 ## Running
 
-* $ pip install pygame
+* $ pip install pygame scipy
 * $ python main.py
 
 ## Standalone windows build
@@ -14,14 +14,18 @@ This is inspired by Meth-Meth-Method's: https://github.com/meth-meth-method/supe
 
 ## Controls
 
-* LeftArrowKey: Move left  
-* RightArrowKey: Move right  
+* Left: Move left  
+* Right: Move right  
 * Space: Jump  
 * Shift: Boost   
-* Left and right Mouseclick: secret   
+* Left/Right Mouseclick: secret   
 
 ## Current state:
-![Alt text](https://i.imgur.com/pGf4624.png)
+![Alt text](img/pics.png "current state")
+
+## Dependencies
+* pygame
+* scipy
 
 ## Contribution
 

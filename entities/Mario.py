@@ -10,6 +10,7 @@ from entities.EntityBase import EntityBase
 from traits.bounce import bounceTrait
 from traits.go import goTrait
 from traits.jump import jumpTrait
+from classes.Pause import Pause
 
 
 class Mario(EntityBase):
@@ -20,7 +21,6 @@ class Mario(EntityBase):
         self.sound = sound
         self.input = Input(self)
         self.inAir = False
-
         self.animation = Animation(
             [
                 self.spriteCollection["mario_run1"].image,
@@ -43,6 +43,8 @@ class Mario(EntityBase):
         self.EntityCollider = EntityCollider(self)
         self.dashboard = dashboard
         self.restart = False
+        self.pause = False
+        self.pauseObj = Pause(screen, self, dashboard)
 
     def update(self):
         self.updateTraits()
